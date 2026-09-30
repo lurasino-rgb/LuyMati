@@ -1,0 +1,1031 @@
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600&display=swap');
+
+:root {
+  --ivory: #F6F0E7;
+  --sand: #C6A06A;
+  --gold: #B48745;
+  --brown: #554237;
+  --charcoal: #20201E;
+  --white: #FFFFFF;
+  --beige: #EDE3D5;
+}
+
+/* =========================
+   IMPORTANT FOR GOOGLE SITES
+========================= */
+
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: auto !important;
+  min-height: 0 !important;
+  overflow: visible !important;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100%;
+  height: auto !important;
+  min-height: 0 !important;
+  overflow: visible !important;
+  font-family: 'DM Sans', sans-serif;
+  background: var(--ivory);
+  color: var(--charcoal);
+  line-height: 1.6;
+}
+
+/* Prevent anything inside from creating its own scrollbar */
+
+body,
+main,
+section,
+div {
+  overflow: visible;
+}
+
+/* =========================
+   GENERAL
+========================= */
+
+* {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+  margin: 0;
+}
+
+section {
+  width: 100%;
+  padding: 110px 8%;
+}
+
+.eyebrow {
+  font-size: 12px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 20px;
+}
+
+.section-title {
+  font-size: clamp(42px, 5vw, 68px);
+  line-height: 1.05;
+  margin-bottom: 30px;
+}
+
+.section-text {
+  max-width: 650px;
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 1.8;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+  min-height: 90vh;
+  height: auto !important;
+
+  display: flex;
+  align-items: flex-end;
+
+  padding: 100px 8%;
+
+  color: var(--white);
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(20,18,16,0.82) 0%,
+      rgba(20,18,16,0.35) 50%,
+      rgba(20,18,16,0.15) 100%
+    ),
+    url('HERO-IMAGE.jpg');
+
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-content {
+  width: 100%;
+  max-width: 850px;
+}
+
+.hero .eyebrow {
+  color: #E4C38C;
+}
+
+.hero h1 {
+  font-size: clamp(65px, 10vw, 125px);
+  line-height: .95;
+  margin-bottom: 25px;
+}
+
+.hero-subtitle {
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 35px;
+}
+
+.button {
+  display: inline-block;
+  padding: 15px 28px;
+
+  border: 1px solid rgba(255,255,255,.7);
+
+  color: white;
+  text-decoration: none;
+
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 2px;
+
+  transition: all .3s ease;
+}
+
+.button:hover {
+  background: white;
+  color: var(--charcoal);
+}
+
+/* =========================
+   INTRO
+========================= */
+
+.intro {
+  text-align: center;
+}
+
+.intro .section-text {
+  margin: auto;
+}
+
+/* =========================
+   SHOWREEL
+========================= */
+
+.video-section {
+  background: var(--charcoal);
+  color: white;
+}
+
+.video-section .eyebrow {
+  color: var(--sand);
+}
+
+.video-container {
+  width: 100%;
+  max-width: 1100px;
+
+  margin: 50px auto 0;
+
+  aspect-ratio: 16 / 9;
+
+  background: #111;
+
+  overflow: hidden !important;
+}
+
+.video-container iframe {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  border: 0;
+}
+
+/* =========================
+   SOUND
+========================= */
+
+.sound {
+  background: var(--ivory);
+}
+
+.sound-header {
+  margin-bottom: 55px;
+}
+
+.sound-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 1px;
+
+  background: rgba(84,66,55,.2);
+}
+
+.sound-card {
+  background: var(--ivory);
+
+  padding: 45px 35px;
+
+  min-height: 180px;
+}
+
+.sound-card h3 {
+  font-size: 28px;
+
+  margin-bottom: 10px;
+}
+
+.sound-card p {
+  font-size: 14px;
+
+  font-weight: 300;
+}
+
+/* =========================
+   ABOUT
+========================= */
+
+.about {
+  background: var(--beige);
+}
+
+.about-grid {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 80px;
+
+  align-items: center;
+}
+
+.about-image {
+  width: 100%;
+
+  min-height: 600px;
+
+  background-image:
+    url('ABOUT-IMAGE.jpg');
+
+  background-size: cover;
+
+  background-position: center;
+}
+
+.about-text {
+  max-width: 650px;
+}
+
+.artist {
+  margin-top: 40px;
+}
+
+.artist h3 {
+  font-size: 30px;
+
+  margin-bottom: 4px;
+}
+
+.artist-role {
+  color: var(--gold);
+
+  text-transform: uppercase;
+
+  font-size: 11px;
+
+  letter-spacing: 2px;
+
+  margin-bottom: 15px;
+}
+
+/* =========================
+   LIVE
+========================= */
+
+.live {
+  background: white;
+}
+
+.live-header {
+  margin-bottom: 55px;
+}
+
+.live-grid {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 22px;
+}
+
+.live-card {
+  position: relative;
+
+  width: 100%;
+
+  aspect-ratio: 9 / 14;
+
+  background: #181716;
+
+  overflow: hidden !important;
+}
+
+.live-card iframe {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  border: 0;
+}
+
+.instagram-card {
+  position: relative;
+
+  width: 100%;
+
+  aspect-ratio: 9 / 14;
+
+  background:
+    linear-gradient(
+      135deg,
+      #554237,
+      #B48745
+    );
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  text-decoration: none;
+
+  color: white;
+
+  overflow: hidden;
+}
+
+.instagram-card::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(0,0,0,.05),
+      rgba(0,0,0,.55)
+    );
+}
+
+.instagram-content {
+  position: relative;
+
+  z-index: 2;
+
+  padding: 25px;
+}
+
+.instagram-icon {
+  width: 55px;
+  height: 55px;
+
+  border: 1px solid rgba(255,255,255,.8);
+
+  border-radius: 14px;
+
+  margin: 0 auto 20px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  font-size: 22px;
+}
+
+.instagram-content h3 {
+  font-size: 27px;
+
+  margin-bottom: 10px;
+}
+
+.instagram-content span {
+  font-size: 10px;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+}
+
+/* =========================
+   VENUES
+========================= */
+
+.venues {
+  background: var(--brown);
+
+  color: white;
+
+  text-align: center;
+}
+
+.venue-list {
+  max-width: 900px;
+
+  margin: 50px auto 0;
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+  justify-content: center;
+
+  gap: 15px 35px;
+}
+
+.venue-list span {
+  font-family: 'Playfair Display', serif;
+
+  font-size: 25px;
+}
+
+/* =========================
+   INTERNATIONAL
+========================= */
+
+.international {
+  text-align: center;
+}
+
+.languages {
+  margin-top: 35px;
+
+  font-size: 13px;
+
+  letter-spacing: 3px;
+
+  text-transform: uppercase;
+
+  color: var(--gold);
+}
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact {
+  background: var(--charcoal);
+
+  color: white;
+
+  text-align: center;
+}
+
+.contact .section-text {
+  margin: 0 auto 35px;
+}
+
+.contact-email {
+  color: var(--sand);
+
+  font-size: 18px;
+
+  text-decoration: none;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+  background: #171715;
+
+  color: rgba(255,255,255,.6);
+
+  text-align: center;
+
+  padding: 30px 20px;
+
+  font-size: 10px;
+
+  letter-spacing: 2px;
+}
+
+/* =========================
+   TABLET / MOBILE
+========================= */
+
+@media (max-width: 900px) {
+
+  .sound-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .live-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-image {
+    min-height: 500px;
+  }
+}
+
+@media (max-width: 600px) {
+
+  section {
+    padding: 80px 7%;
+  }
+
+  .hero {
+    min-height: 90vh;
+
+    padding: 80px 7%;
+  }
+
+  .hero h1 {
+    font-size: 65px;
+  }
+
+  .hero-subtitle {
+    font-size: 12px;
+
+    line-height: 1.8;
+  }
+
+  .sound-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .live-grid {
+    grid-template-columns: 1fr;
+
+    max-width: 420px;
+
+    margin: auto;
+  }
+
+  .about-image {
+    min-height: 420px;
+  }
+
+  .venue-list span {
+    font-size: 21px;
+  }
+}
+</style>
+
+
+<!-- =========================================
+     HERO
+========================================= -->
+
+<section class="hero">
+
+  <div class="hero-content">
+
+    <div class="eyebrow">
+      International Acoustic Duo
+    </div>
+
+    <h1>
+      Lucía & Mati
+    </h1>
+
+    <div class="hero-subtitle">
+      Vocals · Acoustic Guitar · Pop · Soul · Latin · Lounge
+    </div>
+
+    <a href="#video" class="button">
+      Watch Showreel
+    </a>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================
+     INTRO
+========================================= -->
+
+<section class="intro">
+
+  <div class="eyebrow">
+    Music for beautiful places
+  </div>
+
+  <h2 class="section-title">
+    An acoustic experience<br>
+    with an international sound.
+  </h2>
+
+  <p class="section-text">
+    Lucía & Mati create a warm, elegant and versatile live experience
+    for luxury hotels, resorts, lounges, private events and international venues.
+  </p>
+
+</section>
+
+
+<!-- =========================================
+     SHOWREEL
+========================================= -->
+
+<section class="video-section" id="video">
+
+  <div class="eyebrow">
+    Showreel
+  </div>
+
+  <h2 class="section-title">
+    Hear us live.
+  </h2>
+
+  <div class="video-container">
+
+    <iframe
+      src="https://www.youtube-nocookie.com/embed/TT-dYJsJnQ8?rel=0&modestbranding=1"
+      title="Lucía & Mati Showreel"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen>
+    </iframe>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================
+     SOUND
+========================================= -->
+
+<section class="sound">
+
+  <div class="sound-header">
+
+    <div class="eyebrow">
+      Our sound
+    </div>
+
+    <h2 class="section-title">
+      Versatile by nature.
+    </h2>
+
+  </div>
+
+  <div class="sound-grid">
+
+    <div class="sound-card">
+      <h3>Pop</h3>
+      <p>
+        Contemporary songs with an intimate acoustic touch.
+      </p>
+    </div>
+
+    <div class="sound-card">
+      <h3>Soul & R&B</h3>
+      <p>
+        Warm vocals and grooves for sophisticated spaces.
+      </p>
+    </div>
+
+    <div class="sound-card">
+      <h3>Latin</h3>
+      <p>
+        Rhythmic and vibrant sounds from Latin America.
+      </p>
+    </div>
+
+    <div class="sound-card">
+      <h3>Italian</h3>
+      <p>
+        Italian classics and contemporary favorites.
+      </p>
+    </div>
+
+    <div class="sound-card">
+      <h3>Lounge</h3>
+      <p>
+        Elegant acoustic arrangements for relaxed environments.
+      </p>
+    </div>
+
+    <div class="sound-card">
+      <h3>Classics</h3>
+      <p>
+        Familiar songs reimagined in an intimate format.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================
+     ABOUT
+========================================= -->
+
+<section class="about">
+
+  <div class="about-grid">
+
+    <div class="about-image"></div>
+
+    <div class="about-text">
+
+      <div class="eyebrow">
+        About us
+      </div>
+
+      <h2 class="section-title">
+        Two musicians.<br>
+        One shared sound.
+      </h2>
+
+      <div class="artist">
+
+        <h3>
+          Lucía
+        </h3>
+
+        <div class="artist-role">
+          Vocals
+        </div>
+
+        <p>
+          An Argentine singer with more than 10 years of live
+          performance experience. She sings in Spanish, English
+          and Italian, bringing warmth, versatility and emotion
+          to every performance.
+        </p>
+
+      </div>
+
+      <div class="artist">
+
+        <h3>
+          Mati
+        </h3>
+
+        <div class="artist-role">
+          Acoustic Guitar
+        </div>
+
+        <p>
+          An acoustic guitarist who creates the harmonic and
+          rhythmic foundation of the duo, combining sensitivity,
+          groove and an elegant acoustic sound.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================
+     LIVE SESSIONS
+========================================= -->
+
+<section class="live">
+
+  <div class="live-header">
+
+    <div class="eyebrow">
+      Live sessions
+    </div>
+
+    <h2 class="section-title">
+      Hear us live.
+    </h2>
+
+    <p class="section-text">
+      A selection of live performances and acoustic sessions.
+    </p>
+
+  </div>
+
+
+  <div class="live-grid">
+
+
+    <!-- YOUTUBE -->
+
+    <div class="live-card">
+
+      <iframe
+        src="https://www.youtube-nocookie.com/embed/bme5HFWv9jQ?rel=0&modestbranding=1"
+        title="Lucía & Mati Live Session"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen>
+      </iframe>
+
+    </div>
+
+
+    <!-- INSTAGRAM 1 -->
+
+    <a
+      class="instagram-card"
+      href="https://www.instagram.com/reel/DNl20wXyaf1/"
+      target="_blank"
+      rel="noopener noreferrer">
+
+      <div class="instagram-content">
+
+        <div class="instagram-icon">
+          ◎
+        </div>
+
+        <h3>
+          Live Session
+        </h3>
+
+        <span>
+          Watch on Instagram
+        </span>
+
+      </div>
+
+    </a>
+
+
+    <!-- INSTAGRAM 2 -->
+
+    <a
+      class="instagram-card"
+      href="https://www.instagram.com/reel/DE8lIgmMYKo/"
+      target="_blank"
+      rel="noopener noreferrer">
+
+      <div class="instagram-content">
+
+        <div class="instagram-icon">
+          ◎
+        </div>
+
+        <h3>
+          Acoustic Session
+        </h3>
+
+        <span>
+          Watch on Instagram
+        </span>
+
+      </div>
+
+    </a>
+
+
+    <!-- INSTAGRAM 3 -->
+
+    <a
+      class="instagram-card"
+      href="https://www.instagram.com/reel/C6jsGBwr5Jo/"
+      target="_blank"
+      rel="noopener noreferrer">
+
+      <div class="instagram-content">
+
+        <div class="instagram-icon">
+          ◎
+        </div>
+
+        <h3>
+          Live Performance
+        </h3>
+
+        <span>
+          Watch on Instagram
+        </span>
+
+      </div>
+
+    </a>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================
+     VENUES
+========================================= -->
+
+<section class="venues">
+
+  <div class="eyebrow">
+    Where we perform
+  </div>
+
+  <h2 class="section-title">
+    Music for every atmosphere.
+  </h2>
+
+  <div class="venue-list">
+
+    <span>Luxury Hotels</span>
+    <span>Resorts</span>
+    <span>Restaurants</span>
+    <span>Lounges</span>
+    <span>Private Events</span>
+    <span>Corporate Events</span>
+    <span>Sunset Sessions</span>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================
+     INTERNATIONAL
+========================================= -->
+
+<section class="international">
+
+  <div class="eyebrow">
+    International
+  </div>
+
+  <h2 class="section-title">
+    Ready to travel.
+  </h2>
+
+  <p class="section-text" style="margin:auto;">
+
+    Based in Argentina and available for international
+    performances, residencies, private events and
+    hospitality venues.
+
+  </p>
+
+  <div class="languages">
+    Spanish · English · Italian
+  </div>
+
+</section>
+
+
+<!-- =========================================
+     CONTACT
+========================================= -->
+
+<section class="contact">
+
+  <div class="eyebrow">
+    Bookings
+  </div>
+
+  <h2 class="section-title">
+    Let’s make some music.
+  </h2>
+
+  <p class="section-text">
+
+    For bookings, collaborations, hotel residencies,
+    private events and international performances,
+    get in touch with us.
+
+  </p>
+
+  <a
+    class="contact-email"
+    href="mailto:YOUR-EMAIL@example.com">
+
+    YOUR-EMAIL@example.com
+
+  </a>
+
+</section>
+
+
+<!-- =========================================
+     FOOTER
+========================================= -->
+
+<footer>
+
+  LUCÍA & MATI · INTERNATIONAL ACOUSTIC DUO
+
+</footer>
